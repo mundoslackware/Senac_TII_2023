@@ -4,6 +4,7 @@ function App() {
   return (
     <div>
      <h1>Componentes e Props</h1>
+     <h2>Equipe:</h2>
      <Equipe nome='Luciano' cargo='Programador' />
      <Equipe nome='Marcos' cargo='Designer' />
      <Equipe nome='João' cargo='DevOps' />
