@@ -4,6 +4,7 @@ function Botao(props){
         <div>
             <button onClick={props.acaoBtn}>{props.nome}</button>
         </div>
+        
     )
 }
 
