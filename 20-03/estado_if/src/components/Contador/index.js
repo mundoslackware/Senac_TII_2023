@@ -15,9 +15,9 @@ class Contador extends Component{
     }
 
     componentDidMount(){
-        setInterval(() => {
+        setInterval( () => {
             this.setState({ hora: new Date().toLocaleTimeString() })
-        }, 10000)
+        }, 1000)
     }
 
     diminuir(){
