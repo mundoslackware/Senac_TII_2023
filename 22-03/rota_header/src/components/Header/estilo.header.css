@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-left: 50px;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.links h2{
+    margin-right: 50px;
+   padding: 20px;
+}
