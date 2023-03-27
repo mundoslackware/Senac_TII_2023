@@ -1,0 +1,5 @@
+Criando o Aplicativo
+npx create-react-app revisao_react
+
+Biblioteca de Rotas
+npm install react-router-dom
