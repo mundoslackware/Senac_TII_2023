@@ -7,19 +7,20 @@ class Cadastro extends Component{
         this.state={
             nome: '',
             email: '',
-            senha: ''
+            senha: '',
+            sexo: ''
         }
         this.cadastrar = this.cadastrar.bind(this)
     }
 
     cadastrar(event){
         event.preventDefault()
-        const{nome, email, senha} = this.state
-        if(nome === '' || email === '' || senha === ''){
+        const{nome, email, senha, sexo} = this.state
+        if(nome === '' || email === '' || senha === '' || sexo === ''){
             alert('Campos em Branco')
             return
         }
-        alert(`Nome: ${nome} \nE-mail: ${email} \nSenha: ${senha}`)
+        alert(`Nome: ${nome} \nE-mail: ${email} \nSenha: ${senha} \nSexo: ${sexo}`)
     }
 
     render(){
@@ -45,6 +46,11 @@ class Cadastro extends Component{
                     value={this.state.senha}
                     onChange={ (e) => this.setState({senha: e.target.value})}
                     /><br />
+                    <select value={this.state.sexo} onChange={ (e) => this.setState({ sexo: e.target.value })}>
+                        <option value=''></option>
+                        <option value='feminino'>Feminino</option>
+                        <option value='masculino'>Masculino</option>
+                    </select><br />
                     <button type='submit'>Enviar</button>
                 </form>
             </div>
