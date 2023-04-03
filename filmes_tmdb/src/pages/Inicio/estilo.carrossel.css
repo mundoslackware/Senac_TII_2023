@@ -1,0 +1,19 @@
+.containerCarrossel {
+    position: relative;
+
+    display: -webkit-box;
+    display: flex;
+
+    max-width: 1024px;
+    min-height: 768px;
+    margin: auto;
+
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.itemCarrossel img {
+    margin-top: 20px;
+    padding: auto;
+    object-fit: cover;
+}

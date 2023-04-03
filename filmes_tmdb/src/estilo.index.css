@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 800px) {
+   *{
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }

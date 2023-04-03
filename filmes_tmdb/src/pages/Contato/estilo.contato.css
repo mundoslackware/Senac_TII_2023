@@ -1,0 +1,33 @@
+.containerContato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.formulario h1{
+    font-size: 60px;
+    font-weight: bold;
+
+}
+
+.formulario label{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.formulario input{
+    background-color: black;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: center;
+    color: #FFFFFF;
+}
