@@ -2,7 +2,7 @@ import React, {  useState } from 'react'
 
 export default function Contador(){
 
-    const [ valor, setValor] = useState(0)
+    const [ valor, setValor] = useState(10)
 
     function aumentar(){
         setValor(valor + 2)
@@ -13,7 +13,6 @@ export default function Contador(){
         }
         setValor(valor - 1)
     }
-    console.log(typeof valor)
 
 
     return(

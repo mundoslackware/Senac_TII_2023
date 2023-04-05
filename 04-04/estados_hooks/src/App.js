@@ -11,6 +11,7 @@ function App() {
   function handleCadastro() {
     alert(`Nome: ${nome} \nSenha: ${senha}`)
   }
+  
   return (
     <div className='contador'>
       <div>
