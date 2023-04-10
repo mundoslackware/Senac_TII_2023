@@ -9,22 +9,24 @@ import img3 from '../../assets1/corrossel/3.jpg'
 import img4 from '../../assets1/corrossel/4.jpg'
 
 export default function Inicio() {
-    return (  
+    return (
+        <div className='posicao'>
             <div className='containerCarrossel'>
                 <Carousel fade>
                     <Carousel.Item className='itemCarrossel' interval={5000}>
                         <img src={img1} alt="Imagem 1" />
                     </Carousel.Item>
                     <Carousel.Item className='itemCarrossel' interval={5000}>
-                        <img  src={img2} alt="Imagem 2" />
+                        <img src={img2} alt="Imagem 2" />
                     </Carousel.Item>
                     <Carousel.Item className='itemCarrossel' interval={5000}>
-                        <img  src={img3} alt="Imagem 3" />
+                        <img src={img3} alt="Imagem 3" />
                     </Carousel.Item>
                     <Carousel.Item className='itemCarrossel' interval={5000}>
-                        <img  src={img4} alt="Imagem 4" />
+                        <img src={img4} alt="Imagem 4" />
                     </Carousel.Item>
                 </Carousel>
-            </div>       
+            </div>
+        </div>
     )
 }

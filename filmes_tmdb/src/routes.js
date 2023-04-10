@@ -1,8 +1,9 @@
 import React, { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Cabecalho from './components/Cabecalho'
-import Inicio from './pages/Inicio'
+import Rodape from './components/Rodape'
 
+import Inicio from './pages/Inicio'
 import Populares from './pages/Populares'
 import EmCartaz from './pages/EmCartaz'
 import Estreias from './pages/Estreias'

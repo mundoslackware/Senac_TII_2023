@@ -1,0 +1,22 @@
+.footerGeral {
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    background-image: linear-gradient(to right, #088a8d, #600fbc);
+    margin-bottom: 0;        
+  }
+  
+  .footerGeral p{
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-top: 0px;
+    font-weight: bold;
+    text-align: center;
+    color: #948f8f;
+    text-decoration: none;
+}
+
+.footerGeral a{
+  text-decoration: none;
+}
