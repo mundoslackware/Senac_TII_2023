@@ -28,6 +28,7 @@ export default function Rotas() {
                 <Route path='/NaTv' element={<NaTv />} />
                 <Route path='/Contato' element={<Contato />} />
             </Routes>
+            <Rodape />
         </BrowserRouter>
     )
 }
