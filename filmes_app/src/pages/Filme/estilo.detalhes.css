@@ -1,0 +1,8 @@
+.containerDetalhes{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerDetalhes img{
+    width: 550px;
+}

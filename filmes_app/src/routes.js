@@ -15,7 +15,6 @@ export default function RoutesApp() {
                 <Route path='/Detalhes/:id' element={ <Filme /> } />
 
 
-
                 <Route path='*' element={ <Erro /> } />
             </Routes>
         </BrowserRouter>
