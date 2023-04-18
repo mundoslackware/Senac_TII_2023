@@ -8,6 +8,7 @@ import moment from 'moment'
 export default function Filme() {
     const { id } = useParams()
     const [filme, setFilme] = useState({})
+    const [filmes, setFilmes] = useState([''])
 
     useEffect(() => {
 
@@ -21,6 +22,7 @@ export default function Filme() {
                 }
             })
             setFilme(response.data)
+            setFilmes(response.data.production_companies)
         }
         loadFilmeDetail()
 
@@ -30,11 +32,18 @@ export default function Filme() {
 
     return (
         <div className='containerDetalhes'>
+           {filmes.map((det) => {
+            return(
+                <div>
+                    <h1>{det.name}</h1>
+                </div>
+            )
+           })}
             <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title}  />
             <h1>Nome: {filme.title}</h1><br />
             <h1>Descrição:  {filme.overview}</h1><br />
-            <h1>Nota:  {filme.vote_average}</h1>
-            <h1>Nota: {moment({filme.release_date})}</h1>
+            <h1>Nota:  {Number(filme.vote_average).toFixed(1)}</h1>
+            <h1>Nota: {moment(new Date(`${filme.release_date}`)).format('DD-MM-YYYY')}</h1>
         </div>
     )
 }
