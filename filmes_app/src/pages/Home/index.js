@@ -13,7 +13,7 @@ export default function Home() {
                 params: {
                     api_key: 'e3557a63a0916ff565660d0e9b496cba',
                     language: 'pt-BR',
-                    page: 84,
+                    page: 1,
                 }
             })
             setFilme(response.data.results)
@@ -29,7 +29,6 @@ export default function Home() {
                 {filme.map((filmes) => {
                     return (
                         <article key={filmes.id}>
-                            <strong >{filmes.id}</strong>
                             <strong >{filmes.title}</strong>
                             <img src={`https://image.tmdb.org/t/p/original/${filmes.poster_path}`} alt={filmes.title} />
                             <Link to={`/Detalhes/${filmes.id}`}>Detalhes</Link>

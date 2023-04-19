@@ -50,3 +50,13 @@
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
 }
+
+@media screen and (max-width: 1022px) {       
+    .lfilmes{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 10px;
+        box-sizing: border-box;
+    }  
+}
