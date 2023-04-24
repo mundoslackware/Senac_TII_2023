@@ -43,7 +43,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px 0;
-    font-size: 24px;
+    font-size: 1.5rem;
     background-color: #116FEB;
     text-decoration: none;
     color: #FFFFFF;
@@ -58,5 +58,19 @@
         max-width: 100%;
         margin: 10px;
         box-sizing: border-box;
-    }  
+    }
+    
+    .lfilmes a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        font-size: 100%;
+        background-color: #116FEB;
+        text-decoration: none;
+        color: #FFFFFF;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    
 }

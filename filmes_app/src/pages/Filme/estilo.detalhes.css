@@ -6,3 +6,9 @@
 .containerDetalhes img{
     width: 550px;
 }
+
+.containerDetalhes button{
+    margin: 2rem;
+    height: 50px;
+    width: 120px;
+}

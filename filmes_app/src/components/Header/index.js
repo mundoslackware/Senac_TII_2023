@@ -6,7 +6,7 @@ export default function Header(){
         <div>
            <header>
             <Link className='logo' to='/'>Sinopse de Filmes</Link>
-            <Link className='favoritos' to='/favoritos'>Filmes Favoritos</Link>
+            <Link className='favoritos' to='/Favoritos'>Filmes Favoritos</Link>
            </header>
         </div>
     )
