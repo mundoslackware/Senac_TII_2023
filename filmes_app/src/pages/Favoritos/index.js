@@ -1,17 +1,46 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Favoritos(){
+import './estilo.favoritos.css'
 
-    const [filmes, setFilmes] = useState({})
+export default function Favoritos() {
 
-    const minhaLista = localStorage.getItem('@filmesfavoritos')
-    let filmesSalvos = JSON.parse(minhaLista)
-    setFilmes(filmesSalvos)
-    console.log(filmes)
+    const [filmes, setFilmes] = useState([])
+    useEffect(() => {
+        const minhaLista = localStorage.getItem('@filmesfavoritos')
+        setFilmes(JSON.parse(minhaLista) || [])
+    }, [])
 
-    return(
+    function excluirFilme(id){
+        let filtroFilmes = filmes.filter((item) => {
+            return (item.id !== id)
+        })
+        setFilmes(filtroFilmes)
+        localStorage.setItem('@filmesfavoritos', JSON.stringify(filtroFilmes))
+    }
+
+    return (
         <div>
             <h1>Página de Favoritos</h1>
+            <ul>
+                {filmes.map((filme) => {
+                    return (
+                        <div className='containerGeral'>
+                            <div>
+                                <li key={filme.id}>
+                                    <span>{filme.title}</span>
+                                </li>
+                            </div>
+                            <div>
+                                <Link to={`/Detalhes/${filme.id}`}>Ver detalhes</Link>
+                                <button onClick={() => excluirFilme(filme.id)} >Excluir</button>
+                            </div>
+                        </div>
+                    )
+                })}
+            </ul>
+
+
         </div>
     )
 }

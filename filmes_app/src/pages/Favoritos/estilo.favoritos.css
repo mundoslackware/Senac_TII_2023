@@ -1,0 +1,8 @@
+.containerGeral{
+    display: flex;
+    flex-direction: row;
+}
+
+.containerGeral div a{
+    margin: 1rem;
+}
