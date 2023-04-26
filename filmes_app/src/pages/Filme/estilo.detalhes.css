@@ -12,3 +12,8 @@
     height: 50px;
     width: 120px;
 }
+
+.containerDetalhes h1::selection{
+    background-color: brown;
+
+}

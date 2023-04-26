@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import './estilo.detalhes.css'
 import api from '../../services/api'
 
@@ -36,7 +36,7 @@ export default function Filme() {
         }
         filmesSalvos.push(filme)
         localStorage.setItem('@filmesfavoritos', JSON.stringify(filmesSalvos))
-        alert('Filme Salvo com Sucesso')
+        alert('Filme Salvo com Sucesso')        
     }
 
 
