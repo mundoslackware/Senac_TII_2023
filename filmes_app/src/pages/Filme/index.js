@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import './estilo.detalhes.css'
 import api from '../../services/api'
 
@@ -15,7 +15,7 @@ export default function Filme() {
 
             const response = await api.get(`/movie/${id}`, {
                 params: {
-                    api_key: 'e3557a63a0916ff565660d0e9b496cba',
+                    api_key: '',
                     language: 'pt-BR',
                     page: 1,
                 }
