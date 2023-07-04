@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import apiCep from '../../services/apiCep'
+import apiBack from '../../services/apiBack'
 import './estilo.index.css'
 
 export default function Cadastro() {
@@ -40,15 +41,32 @@ export default function Cadastro() {
         }
         addBuscaCep()
     }, [handleBuscaCep])
-    console.log(rua)
 
-    function handleCadastrar(event) {
+   async function handleCadastrar(event) {
         event.preventDefault()
         if(nome === '' || telCel === '' || cep === '' || rua === '' 
         || numero === '' || bairro === '' || cidade === '' || estado === ''){
             alert('Existe campos em Branco')
         }
+
+        //const resposta = await apiBack.post('/cadastroClientes', {
+        await apiBack.post('/cadastroClientes', {
+            codCliente,
+            nome,
+            telFixo,
+            telCel,
+            cep,
+            rua,
+            numero,
+            complemento,
+            bairro,
+            cidade,
+            estado
+        })
+       // console.log(resposta.data.nome)
     }
+
+
 
     return (
         <div className='containerContato'>
