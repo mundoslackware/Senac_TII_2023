@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import apiCep from '../../services/apiCep'
 import apiBack from '../../services/apiBack'
 import './estilo.index.css'
 
+import { toast } from 'react-toastify'
+
 export default function Cadastro() {
+    const navigate = useNavigate()
 
     const [codCliente, setCodCliente] = useState('')
     const [nome, setNome] = useState('')
@@ -47,8 +50,8 @@ export default function Cadastro() {
         if(nome === '' || telCel === '' || cep === '' || rua === '' 
         || numero === '' || bairro === '' || cidade === '' || estado === ''){
             alert('Existe campos em Branco')
+            return
         }
-
         //const resposta = await apiBack.post('/cadastroClientes', {
         await apiBack.post('/cadastroClientes', {
             codCliente,
@@ -63,7 +66,9 @@ export default function Cadastro() {
             cidade,
             estado
         })
-       // console.log(resposta.data.nome)
+       toast.success('resposta.data.msg')
+       navigate('/Manipulacao')
+
     }
 
 

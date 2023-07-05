@@ -37,6 +37,19 @@ app.post('/cadastroClientes', (req, res) => {
     )
 })
 
+app.get('/visualizaDados', (req, res) => {
+    db.query(
+        'SELECT * FROM cliente',
+        (err, result) => {
+            if (err) {
+                res.send({ msg: 'Dados Não Encontrados' })
+            }
+            res.send(result)
+        }
+    )
+
+})
+
 app.listen(3333, () => {
     console.log('Servidor Rodando na porta 3333')
 })
