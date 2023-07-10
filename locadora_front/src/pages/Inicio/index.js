@@ -5,6 +5,8 @@ export default function Inicio(){
         <div>
             <h1>Inicio</h1>
             <Link to='/Cadastro'>Cadastro</Link>
+            <Link to='/Manipulacao'>Lista Cadastro</Link>
+            <Link to='/Altera'>Alterar Cadastro</Link>
         </div>
     )
 }

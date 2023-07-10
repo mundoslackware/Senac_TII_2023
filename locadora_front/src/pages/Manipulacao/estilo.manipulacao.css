@@ -1,0 +1,15 @@
+.dadosApi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.3rem;
+    padding: 1rem;
+
+}
+
+.dadosApi strong{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+

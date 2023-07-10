@@ -33,7 +33,7 @@ export default function Cadastro() {
     async function handleBuscaCep() {
         const response = await apiCep.get(`${cep}/json/`)
         setBuscaCep(response.data)
-    }   
+    }
 
     useEffect(() => {
         function addBuscaCep() {
@@ -45,10 +45,10 @@ export default function Cadastro() {
         addBuscaCep()
     }, [handleBuscaCep])
 
-   async function handleCadastrar(event) {
+    async function handleCadastrar(event) {
         event.preventDefault()
-        if(nome === '' || telCel === '' || cep === '' || rua === '' 
-        || numero === '' || bairro === '' || cidade === '' || estado === ''){
+        if (nome === '' || telCel === '' || cep === '' || rua === ''
+            || numero === '' || bairro === '' || cidade === '' || estado === '') {
             alert('Existe campos em Branco')
             return
         }
@@ -66,8 +66,8 @@ export default function Cadastro() {
             cidade,
             estado
         })
-       toast.success('resposta.data.msg')
-       navigate('/Manipulacao')
+        toast.success('Cadastro Efetuado com Sucesso')
+        navigate('/Manipulacao')
 
     }
 

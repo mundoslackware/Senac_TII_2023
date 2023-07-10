@@ -50,6 +50,26 @@ app.get('/visualizaDados', (req, res) => {
 
 })
 
+app.put('/alteraDados/:id', (req, res) => {
+
+})
+
+app.delete('/deleteUser/:id', (req, res) => {
+    const {id} = req.params
+    db.query(
+        'DELETE FROM cliente WHERE id_cliente = ?',
+        [id],
+        (err) => {
+            if(err){
+                res.send(err)
+            }
+            res.send({msg: 'Apagado com sucesso'})
+        } 
+    )
+})
+
+
+
 app.listen(3333, () => {
     console.log('Servidor Rodando na porta 3333')
 })
