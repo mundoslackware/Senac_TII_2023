@@ -67,7 +67,8 @@ export default function Cadastro() {
             estado
         })
         toast.success('Cadastro Efetuado com Sucesso')
-        navigate('/Manipulacao')
+        window.location.reload()     
+        //navigate('/Manipulacao')
 
     }
 
