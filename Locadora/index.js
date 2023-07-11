@@ -47,10 +47,36 @@ app.get('/visualizaDados', (req, res) => {
             res.send(result)
         }
     )
-
 })
 
+app.get('/visualizaDadosUnico/:id', (req, res) => {
+    const {id} = req.params
+    db.query(
+        'SELECT * FROM cliente WHERE cod_cliente = ?',
+        [id],
+        (err, result) => {
+            if (err) {
+                res.send(err)
+            }
+            res.send(result)
+        }
+    )
+})
+
+
+
 app.put('/alteraDados/:id', (req, res) => {
+    const {id} = req.params
+    const nome = req.body.nome
+    db.query(
+        'UPDATE cliente SET nome = ? WHERE cod_cliente =?', 
+        [nome, id],
+        (err) => {
+            if(err){
+                res.send(err)
+            }
+            res.send({ msg: 'Alteração Feita com Sucesso'})
+    })
 
 })
 
